@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup-buyer.css" />
+    <script
+      src="https://kit.fontawesome.com/53d842b1db.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sign up for Skillverse</title>
+  </head>
+  <body>
+    <!-- Skillverse logo -->
+    <div class="logo">Skillverse</div>
+    <div class="apply-talent">
+      Looking for work?<span
+        ><a href="signup-seller.html">Apply as talent</a></span
+      >
+    </div>
+
+    <!-- main container -->
+    <div class="container">
+      <!-- header -->
+      <div class="heading">Sign up to hire talent</div>
+      <!-- Sign in button -->
+      <div class="signin-btn">
+        <div class="apple">
+          <a href="apple-login-link">
+            <img
+              class="apple-svg"
+              src="SVG/32px-Apple_logo_black.svg.png"
+              alt=""
+            />Continue with Apple
+          </a>
+        </div>
+        <div class="google">
+          <a href="google-login-link"
+            ><img class="google-svg" src="SVG/google.svg" alt="" />
+            Continue with Google
+          </a>
+        </div>
+      </div>
+      <!-- divider -->
+      <div class="divider">
+        <div class="border"></div>
+        <p>or</p>
+        <div class="border"></div>
+      </div>
+
+      <!-- Name -->
+      <div class="name-ip">
+        <div class="fname">
+          <p>First name</p>
+          <input type="text" id="fname" name="fname" />
+        </div>
+        <div class="lname">
+          <p>Last name</p>
+          <input type="text" id="lname" name="lname" />
+        </div>
+      </div>
+      <!-- email -->
+      <div class="address">
+        <p>Work email address</p>
+        <input type="text" id="email" name="email" />
+      </div>
+      <!-- password -->
+      <div class="password">
+        <p>Password</p>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="8"
+          placeholder="Password (8 or more characters)"
+          required
+        />
+      </div>
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          name="join-type"
+          id="promo-emails"
+          value="promo-emails"
+        />
+        <label
+          >Send me emails with tips on how to find talent that fits my
+          needs.</label
+        >
+      </div>
+      <button class="btn" type="submit">Create my account</button>
+      <div class="login">
+        Already have an account? <span><a href="login-link">Log In</a></span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="join.css" />
+  <script src="https://kit.fontawesome.com/53d842b1db.js" crossorigin="anonymous"></script>
+  <title>Sign up for SkillVerse</title>
+  <style>
+    /* Add some basic styling for the button */
+    .btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skillverse logo -->
+  <div class="logo">SkillVerse</div>
+  <!-- main container -->
+  <div class="container">
+    <div class="join-text">Join as a client or freelancer</div>
+
+    <!-- 2 radio buttons -->
+    <div class="radio-btn">
+      <div class="input-1">
+        <div class="svg"><img src="SVG/client.svg" alt="client-svg" /></div>
+        <input
+          class="circle-btn"
+          type="radio"
+          name="join-type"
+          id="client"
+          value="client"
+        />
+        <p>I'm a client, hiring for a project</p>
+      </div>
+      <div class="input-2">
+        <div class="svg"><img src="SVG/seller.svg" alt="freelancer-svg" /></div>
+        <input
+          class="circle-btn"
+          type="radio"
+          name="join-type"
+          id="freelancer"
+          value="freelancer"
+        />
+        <p>I'm a freelancer, looking for work</p>
+      </div>
+    </div>
+
+    <!-- join as a client btn -->
+    <div class="join-btn">
+      <button class="btn" type="button" id="join-btn" onclick="handleJoin()">Join as</button>
+    </div>
+
+    <!-- already have an account -->
+    <div class="login">
+      Already have an account? <span><a href="login-link">Log In</a></span>
+    </div>
+  </div>
+
+  <script>
+    // Function to update the button text based on selected radio button
+    function updateButtonText() {
+      const clientRadio = document.getElementById('client');
+      const freelancerRadio = document.getElementById('freelancer');
+      const joinBtn = document.getElementById('join-btn');
+
+      if (clientRadio.checked) {
+        joinBtn.textContent = 'Join as Client';
+      } else if (freelancerRadio.checked) {
+        joinBtn.textContent = 'Join as Freelancer';
+      } else {
+        joinBtn.textContent = 'Join as'; // Default text when no option is selected
+      }
+    }
+
+    // Function to handle the join button click
+    function handleJoin() {
+      const clientRadio = document.getElementById('client');
+      const freelancerRadio = document.getElementById('freelancer');
+
+      if (clientRadio.checked) {
+        window.location.href = 'signup-buyer.html'; // Redirect to client signup page
+      } else if (freelancerRadio.checked) {
+        window.location.href = 'signup-seller.html'; // Redirect to freelancer signup page
+      } else {
+        alert('Please select an option to join as a client or freelancer.');
+      }
+    }
+
+    // Add event listeners to radio buttons
+    document.getElementById('client').addEventListener('change', updateButtonText);
+    document.getElementById('freelancer').addEventListener('change', updateButtonText);
+  </script>
+</body>
+</html>

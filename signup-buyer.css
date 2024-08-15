@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* .inter-fontclass {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+body {
+  font-size: 1rem;
+}
+.logo {
+  display: inline-block;
+  margin: 1.5rem 2rem 1.5rem 2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.apply-talent {
+  display: relative;
+  float: right;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 1.5rem 2rem;
+}
+.apply-talent a {
+  color: #fe5636;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding-left: 0.7rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* background-color: aqua; */
+  max-width: 700px;
+  height: 100vh;
+  margin: 1rem auto;
+}
+
+/* inside container css */
+.heading {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 1rem;
+}
+.signin-btn {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 0 1.5rem 0;
+}
+.apple a {
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  padding: 0.8rem 4.8rem;
+  border-radius: 2rem;
+  border: 1px solid black;
+  font-size: 0.85rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.google a {
+  margin: 1rem 0.5rem 0rem 0.5rem;
+  padding: 0.8rem 4.8rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 0.85rem;
+  background-color: rgb(60, 118, 244);
+  color: #fef6f6;
+  cursor: pointer;
+  text-decoration: none;
+}
+.apple a:hover {
+  background-color: #dedede;
+}
+.google a:hover {
+  background-color: rgb(102, 145, 238);
+}
+.apple-svg {
+  padding-inline: 0.5rem;
+  height: 13px;
+}
+.google-svg {
+  position: absolute;
+  height: 39px;
+  right: 45.98rem;
+  top: 11.98rem;
+}
+button span {
+  font-size: 0.9rem;
+  /* margin: 1rem; */
+}
+.divider {
+  display: flex;
+  flex-direction: row;
+  /* margin: 1rem; */
+}
+.border {
+  border-top: 1px solid rgb(223, 220, 220);
+  padding-inline: 8.8rem;
+  margin-inline: 0.7rem;
+  margin-top: 2rem;
+}
+.divider p {
+  /* margin-top: 0rem; */
+  padding: 1.3rem 0.2rem;
+}
+.name-ip {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.fname {
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+.name-ip input {
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0rem;
+  border: 2px solid rgb(223, 220, 220);
+  width: 300px;
+  height: 42px;
+}
+.lname {
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
+.address {
+  margin: 1rem;
+}
+.address input {
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0rem;
+  border: 2px solid rgb(223, 220, 220);
+  width: 615px;
+  height: 42px;
+}
+.password {
+  margin: 0.5rem;
+}
+.password input {
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0rem;
+  border: 2px solid rgb(223, 220, 220);
+  width: 615px;
+  height: 42px;
+}
+.password input::placeholder {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+.checkbox {
+  font-weight: 300;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start;
+  justify-content: flex-start; */
+  margin: 1rem 1rem 0 -4.5rem;
+}
+.checkbox input {
+  /* appearance: none; */
+  height: 25px;
+  width: 25px;
+  border: 2px solid rgb(197, 193, 193);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.checkbox label {
+  padding: 0.2rem 0.7rem;
+  cursor: pointer;
+}
+/* .checkbox input:checked {
+  background-color: #fe5636;
+} */
+.btn {
+  color: #fef6f6;
+  background-color: #fe5636;
+  margin: 2.5rem 0 1rem 0;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #f9674a;
+  color: #ffffff;
+}
+.login {
+  display: relative;
+  float: right;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0rem 2rem 1.5rem 2rem;
+}
+.login span a {
+  color: #fe5636;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
