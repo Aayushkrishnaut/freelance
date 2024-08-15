@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SkillVerse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+
+    <!-- Main Content -->
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-4xl font-bold mb-6 text-center">Login to Your Account</h1>
+        
+        <!-- Google Login Button -->
+        <div class="mb-6">
+            <button class="w-full px-6 py-3 bg-red-500 rounded-full text-lg font-semibold flex items-center justify-center">
+                <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google" class="w-6 h-6 mr-2"/>
+                Login with Google
+            </button>
+        </div>
+
+        <!-- Separator -->
+        <div class="text-center my-4">
+            <span class="text-gray-400">or</span>
+        </div>
+
+        <form>
+            <!-- Email -->
+            <div class="mb-4">
+                <label class="block text-sm font-semibold mb-2" for="email">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 bg-gray-700 rounded-lg text-gray-200 focus:outline-none" required>
+            </div>
+
+            <!-- Password with Eye Icon -->
+            <div class="mb-6 relative">
+                <label class="block text-sm font-semibold mb-2" for="password">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-4 py-2 bg-gray-700 rounded-lg text-gray-200 focus:outline-none" required>
+                <span id="togglePassword" class="absolute inset-y-2 right-1 flex items-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M12 4.5C7.30558 4.5 3.487 7.44073 2 12C3.487 16.5593 7.30558 19.5 12 19.5C16.6944 19.5 20.513 16.5593 22 12C20.513 7.44073 16.6944 4.5 12 4.5Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 9.75C10.4812 9.75 9.25 10.9812 9.25 12.5C9.25 14.0188 10.4812 15.25 12 15.25C13.5188 15.25 14.75 14.0188 14.75 12.5C14.75 10.9812 13.5188 9.75 12 9.75Z" fill="currentColor"/>
+                        <path d="M12 7.5V4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 15.75V19.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="w-full px-6 py-3 bg-pink-500 rounded-full text-lg font-semibold">Login</button>
+            </div>
+        </form>
+        
+        <p class="text-center mt-4">Don't have an account? <a href="sign-up.html" class="text-pink-500">Sign Up</a></p>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            
+            // Toggle the eye icon color
+            this.classList.toggle('text-pink-500');
+        });
+    </script>
+
+</body>
+
+</html>
