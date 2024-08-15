@@ -4,14 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill-Verse</title>
+    <title>SkillVerse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
         }
-        
+
+        header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    max-height: 50px; /* Adjust as needed */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
         .typing-effect {
             overflow: hidden; /* Ensures text is hidden until fully typed */
             border-right: .15em solid #fe5636; /* Creates the cursor effect */
@@ -30,37 +66,13 @@
             50% { border-color: #fe5636; }
         }
 
-        /* Add gap between dropdowns */
-        .dropdown-container {
-            margin-right: 16px; /* Adjust the margin as needed */
-        }
-
-        /* Show dropdown content on hover */
-        .dropdown-container:hover .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-menu {
-            display: none;
-        }
-
         .hero-section {
             position: relative; /* Ensure positioning context for the image */
             background-color: #fff; /* Fallback color */
+            text-align: center;
         }
 
-        .hero-image {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 300px; /* Adjust the width as needed */
-            height: auto;
-            background-image: url('https://i.pinimg.com/474x/a5/dc/7d/a5dc7d10f0e274e2393724f0c861cc77.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+        
     </style>
 </head>
 
@@ -73,64 +85,28 @@
             <a href="index.html" class="text-2xl font-extrabold text-[#fe5636]">SkillVerse</a>
         </div>
         <div class="relative flex space-x-6">
-            <!-- Dropdown 1: Freelance Categories -->
-            <div class="dropdown-container relative inline-block">
-                <button class="text-gray-900 focus:outline-none">Freelance Categories</button>
-                <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-900 rounded-lg shadow-lg z-10">
-                    <a href="category-graphic-design.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Graphic Design</a>
-                    <a href="category-writing-translation.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Writing & Translation</a>
-                    <a href="category-web-development.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Web Development</a>
-                    <a href="category-marketing-sales.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Marketing & Sales</a>
-                    <a href="category-video-animation.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Video & Animation</a>
-                    <a href="category-programming-tech.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Programming & Tech</a>
-                </div>
-            </div>
-
-            <!-- Dropdown 2: Services -->
-            <div class="dropdown-container relative inline-block">
-                <button class="text-gray-900 focus:outline-none">Services</button>
-                <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-900 rounded-lg shadow-lg z-10">
-                    <a href="service-consulting.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Consulting</a>
-                    <a href="service-project-management.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Project Management</a>
-                    <a href="service-customer-support.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Customer Support</a>
-                    <a href="service-research.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Research</a>
-                </div>
-            </div>
-
-            <!-- Dropdown 3: Resources -->
-            <div class="dropdown-container relative inline-block">
-                <button class="text-gray-900 focus:outline-none">Resources</button>
-                <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white text-gray-900 rounded-lg shadow-lg z-10">
-                    <a href="resource-blog.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Blog</a>
-                    <a href="resource-guides.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Guides</a>
-                    <a href="resource-case-studies.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Case Studies</a>
-                    <a href="resource-tools.html" class="block px-4 py-2 hover:bg-[#fe5636] transition duration-300">Tools</a>
-                </div>
-            </div>
+            <!-- Dropdowns -->
+            <!-- Add your dropdowns here if needed -->
         </div>
         <div>
             <!-- Updated buttons for Login and Sign Up -->
             <a href="login.html">
                 <button class="ml-4 text-gray-900">Log In</button>
             </a>
-            <a href="sign-up.html">
-                <button class="ml-4 text-gray-900">Sign Up</button>
-            </a>
             <!-- Get Started button -->
-            <a href="get-started.html">
-                <button class="px-4 py-2 bg-[#fe5636] rounded-full ml-4 text-white">Get started</button>
+            <a href="join.html">
+                <button class="px-4 py-2 bg-[#fe5636] rounded-full ml-4 text-white">Join with SkillVerse</button>
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="relative h-screen hero-section">
-        <div class="hero-image"></div> <!-- The small image on the right side -->
+        <div class="hero-image"></div> <!-- The small circular image behind the text -->
         <div class="relative flex flex-col items-center justify-center h-full text-center px-4">
             <h1 class="text-5xl font-bold mb-6 typing-effect text-gray-900">Hire the best freelancers for any job, online.</h1>
             <ul class="text-lg space-y-3 mb-8 text-gray-900">
                 <li>Skillverse: Secure Your Payments, Empower Your Skills.</li>
-                
             </ul>
             <div>
                 <!-- Updated button links -->
