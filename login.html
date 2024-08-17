@@ -3,109 +3,272 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="login.css" />
   <script src="https://kit.fontawesome.com/53d842b1db.js" crossorigin="anonymous"></script>
   <title>Login to SkillVerse</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      font-size: 1rem;
+      background-color: #f4f4f4;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin: 2rem;
+    }
+
+    .logo {
+      width: 50px; /* Adjust as needed */
+      margin-right: 1rem;
+    }
+
+    .logo img {
+      width: 100%;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-text {
+      font-size: 2.5rem;
+      margin: 1rem auto 2rem auto;
+      text-align: center;
+    }
+
+    .login-options {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #cac8c8;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      margin: 1rem;
+      text-align: center;
+      color: black;
+      transition: border 0.2s;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      border-color: #fe5636;
+    }
+
+    .option p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .signup {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 1rem;
+      text-align: center;
+    }
+
+    .signup span a {
+      color: #fe5636;
+      font-weight: 400;
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: #fafafa;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.6rem;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #fe5636;
+    }
+
+    .login-form {
+      display: none;
+      width: 100%;
+      max-width: 500px;
+      margin-top: 2rem;
+    }
+
+    .login-form.active {
+      display: block;
+    }
+
+    .login-form h2 {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .login-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-form label {
+      margin-bottom: 0.5rem;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+    }
+
+    .login-form button {
+      padding: 0.7rem;
+      border-radius: 0.6rem;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-form button:hover {
+      background-color: #fe5636;
+    }
+
+    .social-login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .social-login button {
+      display: flex;
+      align-items: center;
+      padding: 0.7rem;
+      border-radius: 0.6rem;
+      border: none;
+      background-color: #4285f4;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 1rem;
+    }
+
+    .social-login button:hover {
+      background-color: #357ae8;
+    }
+
+    .social-login .fa-google {
+      margin-right: 0.5rem;
+    }
+  </style>
 </head>
-    <style>@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  font-size: 1rem;
-}
-
-.logo {
-  margin: 2rem 2rem 1.5rem 2rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 700px;
-  height: 100vh;
-  margin: 0rem auto;
-}
-
-.login-text {
-  font-size: 2.5rem;
-  margin: 1rem auto 2rem auto;
-}
-
-.login-options {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #cac8c8;
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  transition: border 0.2s;
-}
-
-.option:hover {
-  border-color: #fe5636;
-}
-
-.option p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-top: 1rem;
-}
-
-.signup {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 1rem;
-}
-
-.signup span a {
-  color: #fe5636;
-  font-weight: 400;
-}
-</style>
 <body>
-  <!-- Skillverse logo -->
-  <div class="logo">SkillVerse</div>
-  <!-- main container -->
+  <div class="header">
+    
+    <div class="title">SkillVerse</div>
+  </div>
+
   <div class="container">
     <div class="login-text">Login as a client or freelancer</div>
 
-    <!-- 2 clickable areas -->
     <div class="login-options">
-      <a href="login-client.html" class="option">
+      <div class="option" onclick="showForm('client')">
         <div class="svg"><img src="SVG/client.svg" alt="client-svg" /></div>
         <p>Client Login</p>
-      </a>
-      <a href="login-freelancer.html" class="option">
+      </div>
+      <div class="option" onclick="showForm('freelancer')">
         <div class="svg"><img src="SVG/seller.svg" alt="freelancer-svg" /></div>
         <p>Freelancer Login</p>
-      </a>
+      </div>
     </div>
 
-    <!-- No account yet -->
+    <div id="client-form" class="login-form">
+      <h2>Client Login</h2>
+      <form action="/client-login" method="post">
+        <label for="client-email">Email:</label>
+        <input type="email" id="client-email" name="email" required>
+        <label for="client-password">Password:</label>
+        <input type="password" id="client-password" name="password" required>
+        <button type="submit">Login as Client</button>
+      </form>
+    </div>
+
+    <div id="freelancer-form" class="login-form">
+      <h2>Freelancer Login</h2>
+      <form action="/freelancer-login" method="post">
+        <label for="freelancer-email">Email:</label>
+        <input type="email" id="freelancer-email" name="email" required>
+        <label for="freelancer-password">Password:</label>
+        <input type="password" id="freelancer-password" name="password" required>
+        <button type="submit">Login as Freelancer</button>
+      </form>
+    </div>
+
+    <div class="social-login">
+      <button class="btn">
+        <i class="fab fa-google"></i> Login with Google
+      </button>
+    </div>
+
     <div class="signup">
-      Don't have an account? <span><a href=join.html>Sign Up</a></span>
+      Don't have an account? <span><a href="join.html">Sign Up</a></span>
     </div>
   </div>
+
+  <script>
+    function showForm(formType) {
+      const clientForm = document.getElementById('client-form');
+      const freelancerForm = document.getElementById('freelancer-form');
+      const loginBtn = document.getElementById('login-btn');
+
+      if (formType === 'client') {
+        clientForm.classList.add('active');
+        freelancerForm.classList.remove('active');
+        loginBtn.textContent = 'Login as Client';
+      } else if (formType === 'freelancer') {
+        clientForm.classList.remove('active');
+        freelancerForm.classList.add('active');
+        loginBtn.textContent = 'Login as Freelancer';
+      }
+    }
+
+    // Initialize default form
+    showForm('client');
+  </script>
 </body>
 </html>
