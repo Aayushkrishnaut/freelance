@@ -139,3 +139,29 @@ input:checked {
   color: #fe5636;
   font-weight: 400;
 }
+
+/* ... other CSS remains the same ... */
+
+.input-1,
+.input-2 {
+  display: flex;
+  align-items: center;
+  border: 2px solid #cac8c8;
+  padding: 1.5rem 1rem 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.input-1:hover,
+.input-2:hover {
+  border-color: #fe5636;
+}
+
+/* Ensure input inside label does not affect layout */
+input {
+  margin-right: 1rem;
+}
+
+/* ... other CSS remains the same ... */
+
