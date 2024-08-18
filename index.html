@@ -13,81 +13,122 @@
         }
 
         header {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-}
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+        }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.header-logo {
-    max-height: 50px; /* Adjust as needed */
-}
+        .header-logo {
+            max-height: 50px;
+            /* Adjust as needed */
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
 
-nav ul li {
-    margin-left: 20px;
-}
+        nav ul li {
+            margin-left: 20px;
+        }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-nav ul li a:hover {
-    text-decoration: underline;
-}
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
 
         .typing-effect {
-            overflow: hidden; /* Ensures text is hidden until fully typed */
-            border-right: .15em solid #fe5636; /* Creates the cursor effect */
-            white-space: nowrap; /* Prevents wrapping */
+            overflow: hidden;
+            /* Ensures text is hidden until fully typed */
+            border-right: .15em solid #fe5636;
+            /* Creates the cursor effect */
+            white-space: nowrap;
+            /* Prevents wrapping */
             animation: typing 3s steps(36, end), blink-caret .70s step-end infinite;
-            font-size: 3rem; /* Adjust font size if needed */
+            font-size: 3rem;
+            /* Adjust font size if needed */
         }
 
         @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
         }
 
         @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #fe5636; }
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: #fe5636;
+            }
         }
 
         .hero-section {
-            position: relative; /* Ensure positioning context for the image */
-            background-color: #fff; /* Fallback color */
+            position: relative;
+            /* Ensure positioning context for the image */
+            background-color: #fff;
+            /* Fallback color */
             text-align: center;
         }
 
-        
+        .sticky-navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fe5636;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
 <body class="bg-white text-gray-900">
 
     <!-- Navbar -->
-    <nav class="flex justify-between items-center py-4 px-8 bg-white text-gray-900 relative">
+    <nav class="sticky-navbar flex justify-between items-center py-4 px-8 text-gray-900">
         <div class="text-lg font-bold">
             <!-- Logo -->
             <a href="index.html" class="text-2xl font-extrabold text-[#fe5636]">SkillVerse</a>
         </div>
-        <div class="relative flex space-x-6">
-            <!-- Dropdowns -->
-            <!-- Add your dropdowns here if needed -->
-        </div>
+        <ul class="flex space-x-6">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
         <div>
             <!-- Updated buttons for Login and Sign Up -->
             <a href="login.html">
@@ -119,6 +160,27 @@ nav ul li a:hover {
             </div>
         </div>
     </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100 text-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 text-center">About SkillVerse</h2>
+            <p class="text-lg text-center">SkillVerse is a leading freelancing platform that connects skilled professionals with businesses and clients worldwide. Whether you’re looking to hire top talent or showcase your skills, SkillVerse provides a secure and user-friendly environment for both clients and freelancers. Join us today and take the next step in your freelancing journey!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 text-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 text-center">Contact Us</h2>
+            <p class="text-lg text-center">Have questions or need support? Reach out to us at <a href="mailto:support@skillverse.com" class="text-[#fe5636]">support@skillverse.com</a> and we’ll be happy to assist you.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SkillVerse. All rights reserved. <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+    </footer>
 
 </body>
 
